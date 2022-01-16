@@ -1,14 +1,24 @@
 <template>
   <v-card class="card">
     <div class="card-content">
-      <slot />
+      <slot name="nav" />
+      <slot
+        v-if="!loading"
+        name="content" />
+      <default-preloader v-else />
     </div>
   </v-card>
 </template>
 
 <script>
   export default {
-    name: 'DefaultCard'
+    name: 'DefaultCard',
+    props: {
+      loading: {
+        type: Boolean,
+        default: false
+      }
+    }
   }
 </script>
 
@@ -18,9 +28,11 @@
   margin: 24px auto;
   z-index: 0;
   padding: 6px;
-  background: linear-gradient(to right, #ffee58, #d53a9d);
+  background: linear-gradient(to right, #FFE81F, #381010);
   &-content {
+    position: relative;
     background: #fff;
+    min-height: 400px;
     padding: 16px;
   }
 }

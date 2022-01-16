@@ -18,7 +18,7 @@
 <style lang="scss" scoped>
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 
-
+/* ANIMATED STARS */
 /* @keyframes move-twink-back {
     from {background-position:0 0;}
     to {background-position:-10000px 5000px;}
@@ -47,7 +47,7 @@
   h1 {
     font-family: 'Russo One', sans-serif;
     font-size: 4em;
-    color: #FFEE58;
+    color: #FFE81F;
     z-index: 2;
   }
   &-stars {
@@ -62,7 +62,7 @@
     z-index: 0;
   }
 
-
+  /* ANIMATED STARS */
   /* &-stars::after {
     content: '';
     top:0;
